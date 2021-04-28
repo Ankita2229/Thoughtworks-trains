@@ -64,7 +64,7 @@ public class RailsService {
     * Calculate the number of trips that starts with given vertex, ends with given vertex, and has maximum of 3 stops
     * @param start denotes source node, end denotes target node, maxStops denotes number of stops i.e if number is 5 then there can be 5 or less stops before we reach our destination
     * @return String - number of possible paths that matches maxStops criteria
-    * AtomicInteger - It's a google reference. Searched for a feature that increments counter atomically. Found increment and get - works like a charm!
+    * AtomicInteger - It's a google reference. Searched for a feature that increments counter atomically. Found increment and get!
     * This is recursive method - a queue is declared at the start which is updated based on the last added entry to routes map.
     * As we move further, queue acts as a chaining. For eg - adj.get("C") will add D=? and E=? to the routes. If one of the nodes inside routes map isn't the end node then there will be no effect on the count variable.
     * We add the last added node to the queue and look for its routes and check if end node exists in it. This process will continue until the condition - queue.size < maxStops
@@ -96,7 +96,7 @@ public class RailsService {
      * Calculate the number of trips that starts with given vertex, ends with given vertex, and has exactly 4 stops
      * @param start denotes source node, end denotes target node, exactStops denotes number of stops i.e if number is 5 then there has to be exactly 5 stops before we reach our destination
      * @return String - number of possible paths that matches exactStops criteria
-     * AtomicInteger - It's a google reference. Searched for a feature that increments counter atomically. Found increment and get - works like a charm!
+     * AtomicInteger - It's a google reference. Searched for a feature that increments counter atomically. Found increment and get!
      * This is recursive method - a queue is declared at the start which is updated based on the last added entry to routes map.
      * As we move further, queue acts as a chaining. For eg - adj.get("C") will add D=? and E=? to the routes.
      * To achieve exactStops one of the nodes inside routes map should match the end node and queue size should match exactStops -1 then the count variable will be incremented.
@@ -194,7 +194,7 @@ public class RailsService {
      * Calculate different routes from given start and end vertices and the distance should be less than 30
      * @param start denotes source node, end denotes target node, maxDistance denotes path distance should be less than the given number before we reach destination
      * @return String - number of possible paths that matches maxDistance criteria
-     * AtomicInteger - It's a google reference. Searched for a feature that increments counter atomically. Found increment and get - works like a charm!
+     * AtomicInteger - It's a google reference. Searched for a feature that increments counter atomically. Found increment and get!
      * This is recursive method - a queue is declared at the start which is updated based on the last added entry to routes map.
      * As we move further, queue acts as a chaining. For eg - adj.get("C") will add D=? and E=? to the routes.
      * Total variable is initialized to keep track of distance until we reach the end node. When we each end node and are still under maxDistance then the count variable will be incremented.
